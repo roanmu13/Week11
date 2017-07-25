@@ -13,13 +13,14 @@ namespace Week11
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Original Deck:");
+            ;
             Deck deck = new Deck();
+            Console.WriteLine("Original Deck:  # of Cards: " + deck.Count);
             Console.WriteLine(deck.ToString());
             
             
             Console.WriteLine();
-            Console.WriteLine("Shuffled Deck:");
+            Console.WriteLine("Shuffled Deck:   # of Cards: " + deck.Count);
             deck.Shuffle();
             Console.WriteLine(deck.ToString());
         }
