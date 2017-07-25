@@ -5,10 +5,10 @@ using System.Text;
 /* Name: Rosa Munguia
  Date: July 25 2017
  Description: This is the card class
- Version 0.1- Created card class*/
+ Version 0.2-Implemented the ICloneable interface*/
 namespace Week11
 {
-    public class Card
+    public class Card: ICloneable   
     {
         //PRIVATE INSTANCE VARIABLES-these are integers; using enums as a datatype
         private Face _face;
@@ -47,6 +47,15 @@ namespace Week11
             this.Suit = suit;
         }
         //PRIVATE METHODS
+        
         //PUBLIC METHODS
+        /// <summary>
+        /// This method overrides the built-in Clone method
+        /// </summary>
+        /// <returns></returns>
+        public object Clone()
+        {
+            return new Card(this.Face, this.Suit);
+        }
     }
 }

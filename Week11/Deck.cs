@@ -5,7 +5,7 @@ using System.Text;
 /*Name:Rosa Munguia
  * Date: July 25 2017
  Description: This is the deck class
- version0.1-Created deck class
+ version0.2-Added shuffle method
      */
 namespace Week11
 {
@@ -13,6 +13,7 @@ namespace Week11
     public class Deck: List<Card>//composing list of type card
     {
         //Private instance variables
+        private Random _random;
         //public properties
 
             /// <summary>
@@ -30,6 +31,10 @@ namespace Week11
         /// </summary>
         private void _initialize()
         {
+            //initialize the pseudo-random number generator
+            this._random = new Random();
+
+            //this builds the deck- fills it with cards
             for(int suit=(int)Suit.Clubs; suit <= (int)Suit.Hearts; suit++)
             {
                 for (int face=(int)Face.Ace; face <= (int)Face.King; face++)
@@ -54,6 +59,30 @@ namespace Week11
             }
 
             return outputString;
+        }
+
+        /// <summary>
+        /// this method shuffles the deck by using random indices
+        /// to select two cards at a time
+        /// it uses a fisher-yates like algorithm
+        /// </summary>
+        public void Shuffle()
+        {
+            int firstCard;
+            int secondCard;
+           Card tempCard;
+
+            for (int card=0; card < this.Count; card++)
+            {
+                firstCard = this._random.Next(0, 52);
+                secondCard = this._random.Next(0, 52);
+
+                tempCard =(Card)this[secondCard].Clone();
+                this[secondCard].Face = this[firstCard].Face;
+                this[secondCard].Suit = this[firstCard].Suit;
+                this[firstCard].Face = tempCard.Face;
+                this[firstCard].Suit = tempCard.Suit;
+            }
         }
     }
 }

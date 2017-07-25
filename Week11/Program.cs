@@ -6,14 +6,21 @@ using System.Threading.Tasks;
 /* Name: Rosa Munguia
  Date: July 25 2017
  Description: Demo for Lesson 11
- Version 0.2- Implemented the deck class*/
+ Version 0.3- test shuffle method of the deck class*/
 namespace Week11
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Original Deck:");
             Deck deck = new Deck();
+            Console.WriteLine(deck.ToString());
+            
+            
+            Console.WriteLine();
+            Console.WriteLine("Shuffled Deck:");
+            deck.Shuffle();
             Console.WriteLine(deck.ToString());
         }
     }
