@@ -21,7 +21,7 @@ namespace Week11
             }
             set
             {
-                this._face = Face;
+                this._face = value;
             }
         }
 
@@ -32,7 +32,7 @@ namespace Week11
                 return this._suit;
             }
             set
-            { this._suit = Suit; }
+            { this._suit = value; }
         }
         //CONSTRUCTORS
         /// <summary>
