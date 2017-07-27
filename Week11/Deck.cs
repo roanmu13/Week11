@@ -5,31 +5,25 @@ using System.Text;
 /*Name:Rosa Munguia
  * Date: July 25 2017
  Description: This is the deck class
- version0.3- Refactored shuffle method
+ it inherits 
+ version0.4 Refactored to extend the cardList anstract class
      */
 namespace Week11
 {
 
-    public class Deck: List<Card>//composing list of type card
+    public class Deck: CardList//composing list of type card
     {
         //Private instance variables
         private Random _random;
         //public properties
 
-            /// <summary>
-            /// this is the main constructor
-            /// </summary>
-        //Constructor
-        public Deck()
-        {
-            this._initialize();
-        }
+       
         //Private methods
         /// <summary>
         /// This is the initializer method. It sets the values for private variables and public
         /// properties as well as 
         /// </summary>
-        private void _initialize()
+        protected override void _initialize()
         {
             //initialize the pseudo-random number generator
             this._random = new Random();
@@ -45,6 +39,8 @@ namespace Week11
 
            
         }
+        //constructor
+
         //Public methods
         /// <summary>
         /// This method overrides the built in to string method
