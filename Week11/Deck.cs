@@ -6,7 +6,7 @@ using System.Text;
  * Date: July 25 2017
  Description: This is the deck class
  it inherits 
- version0.5-Refactored ToString method to include a header in the Deck class
+ Version 0.6- Added deal1 method to deck class 
      */
 namespace Week11
 {
@@ -82,6 +82,16 @@ namespace Week11
                 Card.Overwrite(this[firstCard], tempCard);
                 
             }
+        }
+        /// <summary>
+        /// This method returns the top card of the deck
+        /// </summary>
+        /// <returns></returns>
+        public Card Deal1()
+        {
+            Card topCard = this[0];
+            this.RemoveAt(0); //this removes top card form deck
+            return topCard;
         }
     }
 }
