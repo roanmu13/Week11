@@ -6,7 +6,7 @@ using System.Text;
  * Date: July 25 2017
  Description: This is the deck class
  it inherits 
- version0.4 Refactored to extend the cardList anstract class
+ version0.5-Refactored ToString method to include a header in the Deck class
      */
 namespace Week11
 {
@@ -49,6 +49,9 @@ namespace Week11
         public override string ToString()
         {
             string outputString = "";
+
+            outputString += "Deck Contains  Number of Cards: " + this.Count + "\n";
+            Console.WriteLine("******************************************");
             foreach (Card card in this)
             {
                 outputString += "The " + card.Face + " of " + card.Suit + "\n";
