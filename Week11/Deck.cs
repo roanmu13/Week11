@@ -96,5 +96,19 @@ namespace Week11
             Console.WriteLine("Dealt 1 card - Size of Deck: " + this.Count);
             return topCard;
         }
+
+        public Hand Deal5()
+        {
+           
+            Hand fivecards = new Hand();
+            for(int i =0; i <= 4; i++)
+            {
+               Card card = this[0];
+                this.RemoveAt(0);
+                fivecards.Add(card);
+            }
+            Console.WriteLine("Dealt 5 cars New deck size: " + this.Count);
+            return fivecards;
+        }
     }
 }

@@ -13,22 +13,27 @@ namespace Week11
     {
         static void Main(string[] args)
         {
-            ;
+            
             Deck deck = new Deck();
             Hand hand = new Hand();
            // Console.WriteLine("Original Deck:  # of Cards: " + deck.Count);
             Console.WriteLine(deck.ToString());
             Console.WriteLine();
-         //   Console.WriteLine("Shuffled Deck:   # of Cards: " + deck.Count);
+           // Console.WriteLine("Shuffled Deck:   # of Cards: " + deck.Count);
             deck.Shuffle();
             Console.WriteLine(deck.ToString());
 
-            hand.Add(deck.Deal1());
-            Console.WriteLine(hand.ToString());
+          //  hand.Add(deck.Deal1());
+          //  Console.WriteLine(hand.ToString());
+           // Console.WriteLine();
+           // hand.Add(deck.Deal1());
+          //  Console.WriteLine(hand.ToString());
             Console.WriteLine();
-            hand.Add(deck.Deal1());
-            Console.WriteLine(hand.ToString());
 
+          //  hand.Add(deck.Deal5());
+            Console.WriteLine(hand.ToString());
+            hand = deck.Deal5(); // moves the top 5 cards from the deck to the hand object
+            Console.WriteLine(hand.ToString());
         }
     }
 }
