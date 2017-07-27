@@ -15,14 +15,20 @@ namespace Week11
         {
             ;
             Deck deck = new Deck();
+            Hand hand = new Hand();
            // Console.WriteLine("Original Deck:  # of Cards: " + deck.Count);
             Console.WriteLine(deck.ToString());
-            
-            
             Console.WriteLine();
          //   Console.WriteLine("Shuffled Deck:   # of Cards: " + deck.Count);
             deck.Shuffle();
             Console.WriteLine(deck.ToString());
+
+            hand.Add(deck.Deal1());
+            Console.WriteLine(hand.ToString());
+            Console.WriteLine();
+            hand.Add(deck.Deal1());
+            Console.WriteLine(hand.ToString());
+
         }
     }
 }

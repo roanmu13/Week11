@@ -91,6 +91,9 @@ namespace Week11
         {
             Card topCard = this[0];
             this.RemoveAt(0); //this removes top card form deck
+
+            //for testing/debugging only
+            Console.WriteLine("Dealt 1 card - Size of Deck: " + this.Count);
             return topCard;
         }
     }

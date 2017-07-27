@@ -8,7 +8,7 @@ using System.Text;
  Version 0.1. Created Hand Class*/
 namespace Week11
 {
-    public class Hand: CardList
+    public class Hand : CardList
     {
         //private instant variables
 
@@ -20,10 +20,10 @@ namespace Week11
         //private method
         protected override void _initialize()
         {
-        //stub
-        //this method is empty
+            //stub
+            //this method is empty
         }
-        
+
 
         // PUBLIC METHODS
 
@@ -47,4 +47,5 @@ namespace Week11
 
             return outputString;
         }
+    }
 }
