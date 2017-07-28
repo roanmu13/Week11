@@ -47,7 +47,13 @@ namespace Week11
 
             return outputString;
         }
+        public void HighestCards()
+        {
+            Hand inHand = new Hand();
+            var greatestCards = from CA in inHand
+                                where CA.
+                                select CA;
 
-       
+
+        }
     }
-}

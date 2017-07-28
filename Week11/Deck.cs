@@ -107,6 +107,7 @@ namespace Week11
                 this.RemoveAt(0);
                 fivecards.Add(card);
             }
+            //for testing:
             Console.WriteLine("Dealt 5 cars New deck size: " + this.Count);
             return fivecards;
         }
